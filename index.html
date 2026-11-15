@@ -1,0 +1,298 @@
+<!doctype html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#102b3f"><title>منصة الإنجاز والتقارير المدرسية الذكية</title>
+<style>
+:root{--navy:#102b3f;--navy2:#183e55;--green:#16866b;--mint:#e9f5f1;--gold:#d6ad58;--bg:#f4f7f8;--ink:#203342;--muted:#71818c;--line:#e4eaed;--white:#fff;--shadow:0 8px 28px #16344912}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Tahoma,"Arial",sans-serif}button,input,select,textarea{font:inherit}button{cursor:pointer}.app{display:flex;min-height:100vh}.sidebar{width:260px;background:var(--navy);color:white;padding:22px 15px;display:flex;flex-direction:column;gap:22px;flex-shrink:0}.brand{display:flex;gap:12px;align-items:center;padding:4px 8px 18px;border-bottom:1px solid #ffffff20}.logo{width:45px;height:45px;border-radius:14px;background:linear-gradient(145deg,#d8b86b,#16866b);display:grid;place-items:center;font-size:22px}.brand b{display:block;font-size:15px;line-height:1.7}.brand small{color:#b7c9d2;font-size:11px}.nav-label{font-size:10px;color:#9eb3bf;padding:0 12px;margin:3px 0}.nav{display:grid;gap:5px}.nav button{border:0;background:transparent;color:#d4e0e5;text-align:right;padding:12px;border-radius:10px;display:flex;gap:12px;align-items:center;font-size:13px}.nav button:hover,.nav button.active{background:#ffffff18;color:#fff}.nav button.active{box-shadow:inset -3px 0 var(--gold)}.nav .ico{width:20px;text-align:center;font-size:16px}.side-foot{margin-top:auto;border-top:1px solid #ffffff20;padding:15px 8px;color:#b7c9d2;font-size:11px;line-height:2}.main{min-width:0;flex:1}.topbar{height:72px;background:white;border-bottom:1px solid var(--line);display:flex;align-items:center;justify-content:space-between;padding:0 30px;position:sticky;top:0;z-index:5}.crumb{font-size:13px;color:var(--muted)}.top-actions{display:flex;gap:10px;align-items:center}.user-chip{display:flex;align-items:center;gap:9px;font-size:12px}.avatar{width:34px;height:34px;border-radius:50%;background:var(--mint);color:var(--green);display:grid;place-items:center;font-weight:bold}.content{padding:28px;max-width:1500px;margin:auto}.welcome{background:linear-gradient(110deg,#102b3f,#1b5360);color:white;border-radius:18px;padding:26px 30px;display:flex;align-items:center;justify-content:space-between;gap:20px;position:relative;overflow:hidden}.welcome:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #ffffff18;border-radius:50%;left:12%;top:-170px;box-shadow:0 0 0 35px #ffffff08,0 0 0 70px #ffffff05}.welcome h1{font-size:23px;margin:0 0 10px}.welcome p{margin:0;color:#d0e0e5;font-size:13px;line-height:1.9}.welcome .school{font-size:11px;color:#d7c18e;margin-top:12px}.btn{border:0;border-radius:10px;padding:11px 16px;font-size:12px;font-weight:bold;display:inline-flex;align-items:center;justify-content:center;gap:7px}.primary{background:var(--green);color:white}.primary:hover{background:#0e725a}.gold{background:var(--gold);color:#1d2d36}.light{background:white;color:var(--navy);border:1px solid var(--line)}.soft{background:var(--mint);color:var(--green)}.danger{background:#fff0ef;color:#bd443d}.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:15px;margin:22px 0}.stat,.panel{background:white;border:1px solid var(--line);border-radius:15px;box-shadow:var(--shadow)}.stat{padding:18px;display:flex;justify-content:space-between;align-items:center}.stat small{color:var(--muted);font-size:11px}.stat strong{display:block;font-size:25px;margin-top:9px;color:var(--navy)}.stat .sicon{width:42px;height:42px;border-radius:13px;background:var(--mint);display:grid;place-items:center;font-size:20px}.grid2{display:grid;grid-template-columns:1.25fr .75fr;gap:16px}.panel{padding:20px;margin-bottom:16px}.panel-head{display:flex;justify-content:space-between;align-items:center;gap:10px;margin-bottom:17px}.panel h3{margin:0;font-size:15px}.muted{color:var(--muted);font-size:11px}.quick{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.quick button{border:1px solid var(--line);background:#fff;border-radius:12px;padding:16px 10px;text-align:right;color:var(--ink)}.quick button:hover{border-color:#8ac5b4;background:#fbfefd}.quick span{display:block;font-size:20px;margin-bottom:9px}.quick b{font-size:12px}.quick small{display:block;color:var(--muted);font-size:10px;margin-top:5px}.report-list{display:grid;gap:9px}.report-row{border:1px solid var(--line);border-radius:11px;padding:12px;display:flex;align-items:center;justify-content:space-between;gap:12px}.report-title{font-size:12px;font-weight:bold}.report-meta{font-size:10px;color:var(--muted);margin-top:6px}.tag{font-size:10px;padding:5px 9px;border-radius:30px;background:#edf5f2;color:#16866b;white-space:nowrap}.tag.draft{background:#fff5df;color:#a77919}.section-title{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.section-title h2{font-size:20px;margin:0 0 7px}.toolbar{display:flex;gap:8px;flex-wrap:wrap}.field{display:grid;gap:7px;margin-bottom:14px}.field label{font-size:11px;font-weight:bold;color:#425663}.field input,.field select,.field textarea,.search{width:100%;border:1px solid #dce5e8;border-radius:9px;padding:11px;background:white;color:var(--ink);outline:none;font-size:12px}.field textarea{min-height:90px;resize:vertical;line-height:1.8}.field input:focus,.field textarea:focus,.field select:focus,.search:focus{border-color:var(--green);box-shadow:0 0 0 3px #16866b14}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:0 14px}.full{grid-column:1/-1}.empty{text-align:center;padding:32px;color:var(--muted);font-size:12px}.table-wrap{overflow:auto}table{border-collapse:collapse;width:100%;font-size:11px;min-width:650px}th,td{text-align:right;padding:13px 10px;border-bottom:1px solid var(--line)}th{color:var(--muted);font-weight:normal;background:#fafcfc}td b{font-size:11px}.actions{display:flex;gap:5px}.mini{border:0;background:#f1f5f6;border-radius:7px;padding:7px 9px;font-size:11px}.template-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}.template{padding:16px;border:1px solid var(--line);border-radius:13px;background:white;text-align:right}.template:hover{border-color:var(--green);background:#fbfefd}.template .ti{font-size:22px}.template b{display:block;font-size:12px;margin:10px 0 6px}.template small{color:var(--muted);font-size:10px;line-height:1.7}.notice{padding:13px 15px;border-radius:10px;background:#fff8e8;color:#806324;font-size:11px;line-height:1.9;margin-bottom:15px}.success-note{background:#eaf6f1;color:#176b55}.hidden{display:none!important}.modal-back{position:fixed;inset:0;background:#102b3f88;z-index:20;display:grid;place-items:center;padding:18px}.modal{background:white;border-radius:16px;width:min(760px,100%);max-height:92vh;overflow:auto;padding:22px;box-shadow:0 20px 70px #0003}.modal-head{display:flex;justify-content:space-between;align-items:center;margin-bottom:18px}.modal-head h3{margin:0;font-size:16px}.close{border:0;background:#f0f4f5;border-radius:8px;padding:7px 11px}.modal-actions{display:flex;justify-content:flex-start;gap:8px;margin-top:16px}.toast{position:fixed;bottom:20px;left:20px;background:#173b4c;color:white;padding:12px 17px;border-radius:10px;font-size:12px;z-index:40;box-shadow:var(--shadow)}.progress{height:7px;background:#edf1f2;border-radius:9px;overflow:hidden}.progress span{display:block;height:100%;background:var(--green);width:0}
+.print-mode-bar{display:flex;gap:7px;flex-wrap:wrap;margin:12px 0;padding:10px;background:#f5f8f7;border:1px solid #e2ebe7;border-radius:10px}.print-mode-bar button{border:1px solid #d7e4df;background:#fff;color:#36515a;border-radius:8px;padding:9px 12px;font-size:11px}.print-mode-bar button.selected{background:#e5f2ed;border-color:#16866b;color:#126b58;font-weight:bold}
+#print-report.mode-compact section{margin-top:9px!important}#print-report.mode-compact p{font-size:11px!important;line-height:1.55!important}
+#print-report.mode-detailed section{margin-top:11px!important;break-inside:auto;page-break-inside:auto}#print-report.mode-detailed p{font-size:11.5px!important;line-height:1.65!important}
+#print-report.mode-evidence section{margin-top:11px!important}#print-report.mode-evidence section:has(img){page-break-before:auto;break-before:auto}
+#print-report.mode-evidence section:has(img) img{height:175px!important}
+.evidence-picker{border:1px dashed #16866b;border-radius:12px;background:#f7fbf9;padding:14px}
+.evidence-pick-btn{display:inline-flex;align-items:center;gap:8px;background:#e7f3ef;color:#126b58;border:1px solid #b8d9cd;border-radius:9px;padding:10px 14px;font-weight:bold;font-size:12px}
+.evidence-preview{display:flex;flex-wrap:wrap;gap:9px;margin-top:12px}
+.evidence-thumb{width:92px;height:82px;object-fit:cover;border:1px solid #d9e5df;border-radius:8px;background:white}
+.evidence-file{font-size:10px;color:#50636b;background:white;border:1px solid #e1e9e5;border-radius:7px;padding:7px;max-width:150px;overflow-wrap:anywhere}
+.settings-card{max-width:780px}.footer{text-align:center;color:#9aa8ae;font-size:10px;padding:18px}
+@media(max-width:900px){.sidebar{width:72px;padding:18px 9px}.brand{justify-content:center;padding:0 0 16px}.brand div:last-child,.nav-label,.nav button .navtext,.side-foot{display:none}.nav button{justify-content:center;padding:13px}.nav .ico{font-size:19px}.content{padding:20px}.stats{grid-template-columns:repeat(2,1fr)}.grid2{grid-template-columns:1fr}}
+@media(max-width:560px){.topbar{padding:0 14px;height:60px}.content{padding:14px}.welcome{padding:20px;display:block}.welcome h1{font-size:19px}.welcome .btn{margin-top:15px}.stats{gap:9px}.stat{padding:13px}.stat strong{font-size:21px}.quick,.template-grid{grid-template-columns:repeat(2,1fr)}.form-grid{grid-template-columns:1fr}.full{grid-column:auto}.section-title{align-items:flex-start;flex-direction:column}.user-chip span:last-child{display:none}}
+@media print{
+html,body{background:#fff!important;margin:0!important;padding:0!important}
+body *{visibility:hidden!important}
+#print-report,#print-report *{visibility:visible!important}
+#print-report{display:block!important;position:absolute!important;top:0!important;right:0!important;left:0!important;width:100%!important;max-width:none!important;margin:0!important;padding:8mm 9mm!important;background:#fff!important;color:#203342!important;box-shadow:none!important;border:4px double #16866b!important;outline:1px solid #d2ad5b!important;outline-offset:-9px!important}
+#print-report table{width:100%!important;border-collapse:collapse!important}
+#print-report .ministry-header{ text-align:center;border-bottom:3px solid #16866b;padding:4px 0 14px;margin-bottom:18px }
+#print-report .formal-letterhead{direction:ltr!important;display:grid!important;grid-template-columns:1fr 1fr 1.45fr;align-items:center;gap:16px;text-align:center!important;border-bottom:2px solid #34434a!important;padding:10px 8px 16px!important;margin-bottom:18px!important;min-height:112px}
+#print-report .formal-letterhead .vision-mark{grid-column:1;grid-row:1;text-align:center;color:#8b8f91;line-height:1}
+#print-report .formal-letterhead .vision-word{font-size:18px;letter-spacing:1px;font-weight:500}
+#print-report .formal-letterhead .vision-number{font-size:42px;font-weight:800;letter-spacing:-3px;color:#8b8f91;line-height:1.05}
+#print-report .formal-letterhead .vision-zero{color:#087c70}
+#print-report .formal-letterhead .vision-caption{font-size:9px;color:#777;margin-top:3px}
+#print-report .formal-letterhead .ministry-mark{grid-column:2;grid-row:1;text-align:center}
+#print-report .formal-letterhead .ministry-mark svg{display:block;width:130px;height:54px;margin:0 auto 2px}
+#print-report .formal-letterhead .ministry-mark .ar{font-size:19px;font-weight:800;color:#087c70;line-height:1.3}
+#print-report .formal-letterhead .ministry-mark .en{font-size:10px;color:#087c70;font-weight:600}
+#print-report .formal-letterhead .institution-details{direction:rtl!important;grid-column:3;grid-row:1;text-align:center;font-size:15px;line-height:1.85;font-weight:700;color:#111}
+#print-report .formal-letterhead .institution-details .school-name{font-weight:800}
+
+#print-report .ministry-header svg{display:block;width:150px;height:64px;margin:0 auto 3px}
+#print-report .ministry-header .ar{font-size:23px;font-weight:800;color:#087c70;line-height:1.4}
+#print-report .ministry-header .en{font-size:12px;color:#087c70;font-weight:600;letter-spacing:.2px}
+#print-report .report-title-print{background:#e7f2ef;border-radius:10px;padding:10px 12px;font-size:20px!important;margin:16px 0!important}
+#print-report .report-signatures{display:flex;justify-content:space-between;gap:24px;margin-top:38px;padding:0 10px 8px;text-align:center;break-inside:avoid}
+#print-report .report-final-page{display:flex;flex-direction:column;min-width:0}
+#print-report .report-final-page.has-attachments{min-height:248mm!important;display:flex!important;flex-direction:column!important;break-inside:avoid-page!important;page-break-inside:avoid!important}
+#print-report .report-signatures{margin-top:auto!important;padding-top:20px!important;padding-bottom:12mm!important;break-inside:avoid!important;page-break-inside:avoid!important;justify-content:space-between!important;align-items:flex-end!important}
+#print-report .evidence-print-grid{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;column-gap:22px!important;row-gap:22px!important;align-items:center!important;justify-items:stretch!important}
+#print-report .evidence-print-grid>div{width:100%!important;min-width:0;display:flex!important;align-items:center!important;justify-content:center!important;break-inside:avoid;page-break-inside:avoid}
+#print-report .evidence-print-grid img{height:165px!important;width:100%!important;max-width:100%!important;object-fit:contain!important;display:block!important;margin:0 auto!important}
+
+#print-report .report-signature{width:42%;font-size:13px;font-weight:700;color:#203342}
+#print-report .report-signature .line{border-top:1px solid #34434a;margin-bottom:8px;padding-top:7px}
+#print-report .report-signature .name{display:inline-block;margin-top:8px;padding:7px 12px;background:#e8f2ef;border-radius:20px;font-size:14px}
+#print-report .goals-list{direction:rtl;list-style:none;margin:7px 0 0;padding:0}
+#print-report .goals-list li{direction:rtl;display:flex;flex-direction:row;gap:9px;align-items:flex-start;padding:7px 8px;border:1px solid #d5e5df;border-radius:8px;margin:5px 0;background:#fbfefd;line-height:1.65;break-inside:avoid;page-break-inside:avoid;text-align:right}
+#print-report .goals-list .goal-number{display:inline-flex;flex:0 0 28px;width:28px;min-height:28px;align-items:center;justify-content:center;background:#087c70;color:#fff;border-radius:6px;font-weight:800;text-align:center}
+#print-report .goals-list .goal-text{display:block;flex:1;min-width:0;text-align:right}
+#print-report section{orphans:3;widows:3}
+#print-report section h3{break-after:avoid-page;page-break-after:avoid}
+#print-report .report-title-print,#print-report table,#print-report .formal-letterhead{break-inside:avoid;page-break-inside:avoid}
+#print-report .goals-list li{break-inside:avoid;page-break-inside:avoid}
+#print-report td{border:1px solid #cbd8d5!important;padding:9px!important}
+#print-report h2,#print-report h3{page-break-after:avoid!important}
+#modal-root{position:static!important;height:0!important;overflow:visible!important}
+.modal-back,.modal{break-before:auto!important;page-break-before:auto!important}
+#print-report{break-before:auto!important;page-break-before:auto!important}
+.modal-back,.modal{display:block!important;position:static!important;inset:auto!important;width:100%!important;max-width:none!important;max-height:none!important;overflow:visible!important;padding:0!important;margin:0!important;background:#fff!important;box-shadow:none!important;border:0!important}
+.no-print,.sidebar,.topbar,.footer{display:none!important}
+@page{size:A4;margin:10mm}
+}
+@media screen and (max-width:700px){#print-report .formal-letterhead{direction:ltr!important;grid-template-columns:1fr 1fr!important}#print-report .formal-letterhead .institution-details{grid-column:1/-1;grid-row:2}#print-report .formal-letterhead .vision-mark{grid-column:1;grid-row:1}#print-report .formal-letterhead .ministry-mark{grid-column:2;grid-row:1}}
+
+/* إخفاء أسماء الملفات والنصوص أسفل صور الشواهد في الطباعة */
+#print-report .evidence-print-grid figcaption,
+#print-report .evidence-print-grid .evidence-caption,
+#print-report .evidence-print-grid .evidence-name,
+#print-report .evidence-print-grid .file-name,
+#print-report .evidence-print-grid .attachment-name,
+#print-report .evidence-print-grid small,
+#print-report .evidence-print-grid p {
+  display: none !important;
+}
+#print-report .evidence-print-grid figure,
+#print-report .evidence-print-grid .evidence-item {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+
+
+/* تحسين توزيع الشواهد والتوقيعات في النسخة المطبوعة */
+#print-report .evidence-print-grid{width:100%!important;box-sizing:border-box!important}
+#print-report .evidence-print-grid>div img{border-radius:5px!important}
+#print-report .report-signatures .report-signature{flex:0 0 42%!important}
+
+</style></head>
+<body>
+<div class="app">
+<aside class="sidebar">
+ <div class="brand"><div class="logo">✦</div><div><b>منصة الإنجاز المدرسي</b><small>التقارير الذكية</small></div></div>
+ <div><div class="nav-label">القائمة الرئيسية</div><nav class="nav">
+ <button class="active" data-page="home"><span class="ico">⌂</span><span class="navtext">لوحة التحكم</span></button>
+ <button data-page="reports"><span class="ico">▤</span><span class="navtext">التقارير المدرسية</span></button>
+ <button data-page="templates"><span class="ico">▦</span><span class="navtext">قوالب التقارير</span></button>
+ <button data-page="programs"><span class="ico">✧</span><span class="navtext">البرامج والمبادرات</span></button>
+ <button data-page="guidance"><span class="ico">♧</span><span class="navtext">التوجيه الطلابي</span></button>
+ <button data-page="performance"><span class="ico">▥</span><span class="navtext">الأداء والمؤشرات</span></button>
+ <button data-page="evidence"><span class="ico">▣</span><span class="navtext">الشواهد والأرشيف</span></button>
+ </nav></div>
+ <div><div class="nav-label">إدارة المنصة</div><nav class="nav"><button data-page="assistant"><span class="ico">✳</span><span class="navtext">المساعد الذكي</span></button><button data-page="settings"><span class="ico">⚙</span><span class="navtext">الإعدادات والربط</span></button></nav></div>
+ <div class="side-foot">إعداد وإشراف<br><b>الموجّه الطلابي</b><br>مجمع عدي بن حاتم الطائي بعذفاء</div>
+</aside>
+<main class="main">
+<header class="topbar"><div class="crumb" id="crumb">الرئيسية / لوحة التحكم</div><div class="top-actions"><button class="btn light no-print" onclick="openReport()">＋ تقرير جديد</button><div class="user-chip"><div class="avatar">م</div><span>الموجّه الطلابي</span></div></div></header>
+<div class="content">
+<section id="page-home" class="page">
+ <div class="welcome"><div><h1>مرحباً بك في منصة الإنجاز المدرسي الذكية</h1><p>مساحة موحدة لإعداد التقارير، وتوثيق البرامج، وقياس الأثر، وحفظ الشواهد المدرسية.</p><div class="school">مجمع عدي بن حاتم الطائي بعذفاء</div></div><button class="btn gold no-print" onclick="openReport()">＋ ابدأ تقريراً جديداً</button></div>
+ <div class="stats">
+ <div class="stat"><div><small>إجمالي التقارير</small><strong id="stat-total">0</strong></div><div class="sicon">▤</div></div>
+ <div class="stat"><div><small>تقارير هذا الشهر</small><strong id="stat-month">0</strong></div><div class="sicon">◷</div></div>
+ <div class="stat"><div><small>البرامج والمبادرات</small><strong id="stat-programs">0</strong></div><div class="sicon">✧</div></div>
+ <div class="stat"><div><small>التقارير المكتملة</small><strong id="stat-done">0</strong></div><div class="sicon">✓</div></div>
+ </div>
+ <div class="grid2"><div class="panel"><div class="panel-head"><h3>إنشاء سريع</h3><span class="muted">اختر نوع العمل</span></div><div class="quick">
+ <button onclick="openReport('تقرير تنفيذ برنامج')"><span>📋</span><b>تقرير برنامج</b><small>توثيق التنفيذ والأثر</small></button>
+ <button onclick="openReport('تقرير مبادرة')"><span>💡</span><b>تقرير مبادرة</b><small>الفكرة والنتائج</small></button>
+ <button onclick="openReport('محضر اجتماع')"><span>👥</span><b>محضر اجتماع</b><small>الحضور والتوصيات</small></button>
+ <button onclick="openReport('تقرير توجيه طلابي')"><span>🌱</span><b>تقرير إرشادي</b><small>البرامج والخدمات</small></button>
+ <button onclick="openReport('تقرير انضباط')"><span>🎯</span><b>تقرير انضباط</b><small>المتابعة والمؤشرات</small></button>
+ <button onclick="openReport('تقرير أداء')"><span>📈</span><b>تقرير أداء</b><small>الإنجاز والتحليل</small></button>
+ </div></div><div class="panel"><div class="panel-head"><h3>ملخص الإنجاز</h3><span class="muted">حسب حالة التقارير</span></div><div id="status-summary"></div><div style="margin-top:22px"><div class="muted" style="margin-bottom:9px">نسبة التقارير المكتملة</div><div class="progress"><span id="done-progress"></span></div><div class="muted" id="done-label" style="margin-top:8px">لا توجد بيانات بعد</div></div></div></div>
+ <div class="panel"><div class="panel-head"><h3>أحدث التقارير</h3><button class="btn soft no-print" onclick="navigate('reports')">عرض الأرشيف ←</button></div><div id="recent-list" class="report-list"></div></div>
+</section>
+<section id="page-reports" class="page hidden"><div class="section-title"><div><h2>التقارير المدرسية</h2><div class="muted">إنشاء التقارير وإدارتها ومراجعة حالتها</div></div><button class="btn primary no-print" onclick="openReport()">＋ إنشاء تقرير</button></div><div class="panel"><div class="toolbar" style="margin-bottom:15px"><input id="report-search" class="search" style="max-width:280px" placeholder="ابحث باسم التقرير أو المجال..." oninput="renderReports()"><select id="report-filter" class="search" style="max-width:180px" onchange="renderReports()"><option value="">جميع الحالات</option><option>مسودة</option><option>مكتمل</option><option>قيد المراجعة</option></select></div><div class="table-wrap"><table><thead><tr><th>عنوان التقرير</th><th>التصنيف</th><th>التاريخ</th><th>الحالة</th><th>الإجراءات</th></tr></thead><tbody id="reports-table"></tbody></table></div></div></section>
+<section id="page-templates" class="page hidden"><div class="section-title"><div><h2>قوالب التقارير</h2><div class="muted">ابدأ من قالب جاهز ثم خصّص محتواه</div></div></div><div id="templates-grid" class="template-grid"></div></section>
+<section id="page-programs" class="page hidden"><div class="section-title"><div><h2>البرامج والمبادرات</h2><div class="muted">إدارة البرامج والفعاليات المدرسية من خلال تقاريرها</div></div><button class="btn primary" onclick="openReport('تقرير تنفيذ برنامج')">＋ توثيق برنامج</button></div><div class="panel"><div class="notice">تُحفظ البرامج في سجل التقارير تحت تصنيف البرامج والمبادرات، ويمكن تصفيتها والرجوع إليها من الأرشيف.</div><div id="program-list" class="report-list"></div></div></section>
+<section id="page-guidance" class="page hidden"><div class="section-title"><div><h2>التوجيه الطلابي</h2><div class="muted">نماذج التوثيق والمتابعة والخدمات الإرشادية</div></div><button class="btn primary" onclick="openReport('تقرير توجيه طلابي')">＋ تقرير إرشادي</button></div><div id="guidance-grid" class="template-grid"></div></section>
+<section id="page-performance" class="page hidden"><div class="section-title"><div><h2>الأداء والمؤشرات</h2><div class="muted">قراءة أولية لبيانات التقارير المسجلة</div></div></div><div class="stats"><div class="stat"><div><small>إجمالي المستفيدين المسجلين</small><strong id="beneficiaries">0</strong></div><div class="sicon">♙</div></div><div class="stat"><div><small>متوسط نسبة الإنجاز</small><strong id="avg-progress">0%</strong></div><div class="sicon">◔</div></div><div class="stat"><div><small>تقارير قيد المراجعة</small><strong id="review-count">0</strong></div><div class="sicon">◷</div></div><div class="stat"><div><small>تقارير المسودة</small><strong id="draft-count">0</strong></div><div class="sicon">✎</div></div></div><div class="panel"><h3 style="margin-bottom:14px">ملاحظة تحليلية</h3><p class="muted" id="analysis-text">أضف تقاريرك لتظهر المؤشرات والتحليلات هنا. الأرقام تعكس البيانات التي أدخلتها فقط.</p></div></section>
+<section id="page-evidence" class="page hidden"><div class="section-title"><div><h2>الشواهد والأرشيف</h2><div class="muted">الوصول إلى التقارير التي تتضمن وصفاً للشواهد والمرفقات</div></div></div><div class="panel"><div class="notice">في هذه النسخة الأولية يمكنك تسجيل وصف الشواهد داخل التقرير. رفع الملفات وتخزينها سحابياً يُفعّل بعد ربط خدمة التخزين.</div><div id="evidence-list" class="report-list"></div></div></section>
+<section id="page-assistant" class="page hidden"><div class="section-title"><div><h2>المساعد الذكي</h2><div class="muted">صياغة التقارير والأهداف والنتائج والتوصيات</div></div></div><div class="panel settings-card"><div class="notice">يعمل التوليد الفعلي بعد إعداد عنوان خدمة الذكاء الاصطناعي الخلفية في الإعدادات. لا تضع مفتاح API سرياً في المتصفح.</div><div class="field"><label>ما الذي تريد صياغته؟</label><select id="ai-kind"><option>تقرير برنامج مدرسي متكامل</option><option>أهداف إجرائية قابلة للقياس</option><option>وصف تنفيذ وممارسات</option><option>نتائج ومؤشرات أثر</option><option>توصيات وخطة تحسين</option><option>ملخص تنفيذي</option></select></div><div class="field"><label>المعلومات المتاحة</label><textarea id="ai-input" placeholder="اكتب اسم البرنامج والفئة المستهدفة وما تم تنفيذه وأي نتائج متاحة..."></textarea></div><div class="field"><label for="ai-provider">محرك الذكاء الاصطناعي</label><select id="ai-provider" onchange="saveAIProvider()"><option value="gemini">Gemini (الاقتصادي - الافتراضي)</option><option value="openai">OpenAI</option></select><small class="muted">يمكنك التبديل بين المحركين في أي وقت.</small></div><button class="btn primary" onclick="generateAI()">✳ توليد المحتوى</button><div class="field" style="margin-top:18px"><label>النص الناتج</label><textarea id="ai-output" placeholder="سيظهر النص المولّد هنا..." style="min-height:180px"></textarea></div><div class="toolbar"><button class="btn light" onclick="copyAI()">نسخ النص</button><button class="btn soft" id="apply-ai-btn" onclick="applyAIDraft()" disabled>تطبيق المحتوى في تقرير جديد ←</button></div></div></section>
+<section id="page-settings" class="page hidden"><div class="section-title"><div><h2>الإعدادات والربط</h2><div class="muted">هوية المنصة والاتصال بالخدمات السحابية</div></div></div><div class="panel settings-card"><h3 style="margin-bottom:16px">الهوية المؤسسية</h3><div class="form-grid"><div class="field"><label>اسم معدّ التقارير</label><input id="setting-author" value="الموجّه الطلابي"></div><div class="field"><label>اسم المدرسة</label><input id="setting-school" value="مجمع عدي بن حاتم الطائي بعذفاء"></div><div class="field"><label>العام الدراسي</label><input id="setting-year" placeholder="مثال: 1448هـ"></div><div class="field"><label>اللون الرئيسي</label><select id="setting-theme"><option value="green">أخضر زمردي</option><option value="blue">أزرق مؤسسي</option></select></div></div><hr style="border:0;border-top:1px solid var(--line);margin:12px 0 20px"><h3 style="margin-bottom:8px">قاعدة البيانات السحابية – Supabase</h3><div class="notice">أدخل رابط المشروع ومفتاح anon العام بعد إنشاء جدول قاعدة البيانات وتشغيل ملف SQL المرفق. فعّل سياسات RLS المناسبة قبل استخدام بيانات حقيقية. لا تستخدم service_role في المتصفح.</div><div class="field"><label>رابط مشروع Supabase</label><input id="sb-url" placeholder="https://xxxx.supabase.co"></div><div class="field"><label>مفتاح anon / publishable</label><input id="sb-key" placeholder="المفتاح العام للمشروع"></div><div class="toolbar"><button class="btn primary" onclick="saveSettings()">حفظ الإعدادات</button><button class="btn light" onclick="testCloud()">اختبار الاتصال</button><button class="btn soft" onclick="syncCloud()">مزامنة التقارير</button></div><div id="cloud-status" class="muted" style="margin-top:12px">الحفظ الحالي: محلي على هذا المتصفح.</div><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3 style="margin-bottom:8px">خدمة الذكاء الاصطناعي</h3><div class="notice">ضع رابط API لخادمك الآمن الذي يتولى الاتصال بمزوّد الذكاء الاصطناعي. يجب أن يستقبل POST بصيغة JSON: {task, context} ويعيد {text}.</div><div class="field"><label>رابط الخدمة الخلفية</label><input id="ai-endpoint" placeholder="https://your-domain.com/api/generate"></div><button class="btn primary" onclick="saveSettings()">حفظ إعدادات الربط</button><hr style="border:0;border-top:1px solid var(--line);margin:22px 0"><h3 style="margin-bottom:8px">النسخ الاحتياطي</h3><p class="muted">يمكن تصدير جميع التقارير المسجلة في هذا المتصفح بصيغة JSON والاحتفاظ بنسخة مستقلة.</p><div class="toolbar"><button class="btn light" onclick="backup()">⬇ تصدير نسخة احتياطية</button><label class="btn light" for="restore-file">⬆ استيراد نسخة احتياطية</label><input id="restore-file" type="file" accept=".json,application/json" class="hidden" onchange="restoreBackup(event)"></div></div></section>
+<div class="footer">منصة الإنجاز والتقارير المدرسية الذكية · إصدار تأسيسي 1.0</div>
+</div></main></div>
+<div id="modal-root"></div><div id="toast" class="toast hidden"></div>
+<script>
+const templates=[
+["تقرير تنفيذ برنامج","البرامج والمبادرات","📋","توثيق البرنامج من التخطيط حتى قياس الأثر."],
+["تقرير مبادرة","البرامج والمبادرات","💡","عرض فكرة المبادرة وأهدافها وتنفيذها ونتائجها."],
+["تقرير فعالية مدرسية","الأنشطة المدرسية","🎉","توثيق الفعاليات والمناسبات المدرسية."],
+["محضر اجتماع","الإدارة المدرسية","👥","تسجيل الحضور ومحاور الاجتماع والتوصيات."],
+["تقرير ورشة عمل","التطوير المهني","🧠","توثيق الورش التدريبية ومخرجاتها."],
+["تقرير توجيه طلابي","التوجيه الطلابي","🌱","البرامج والخدمات الإرشادية المقدمة للطلاب."],
+["تقرير متابعة سلوكية","التوجيه الطلابي","🤝","متابعة السلوك الإيجابي وخطط الدعم."],
+["تقرير انضباط","الأداء المدرسي","🎯","متابعة الحضور والانضباط والتأخر."],
+["تقرير تحصيل دراسي","الأداء المدرسي","📚","قراءة نتائج التحصيل وخطط التحسين."],
+["تقرير شراكة مجتمعية","الشراكة المجتمعية","🏫","توثيق التعاون مع الأسرة والمجتمع."],
+["تقرير خطة علاجية","الأداء المدرسي","🩺","توثيق التدخلات العلاجية ومتابعة تقدمها."],
+["تقرير أداء","الأداء المدرسي","📈","عرض الإنجازات والمؤشرات والتوصيات."]
+];
+const $=id=>document.getElementById(id);
+let reports=JSON.parse(localStorage.getItem("school_reports_v1")||"[]");
+let selectedEvidence=[];
+let aiDraft=null;
+let settings=JSON.parse(localStorage.getItem("school_settings_v1")||"{}");
+const save=()=>localStorage.setItem("school_reports_v1",JSON.stringify(reports));
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+function toast(t){$("toast").textContent=t;$("toast").classList.remove("hidden");setTimeout(()=>$("toast").classList.add("hidden"),2600)}
+function navigate(page){document.querySelectorAll(".page").forEach(x=>x.classList.add("hidden"));$("page-"+page).classList.remove("hidden");document.querySelectorAll(".nav button").forEach(x=>x.classList.toggle("active",x.dataset.page===page));let names={home:"لوحة التحكم",reports:"التقارير المدرسية",templates:"قوالب التقارير",programs:"البرامج والمبادرات",guidance:"التوجيه الطلابي",performance:"الأداء والمؤشرات",evidence:"الشواهد والأرشيف",assistant:"المساعد الذكي",settings:"الإعدادات والربط"};$("crumb").textContent="الرئيسية / "+names[page];if(page==="reports")renderReports();if(page==="performance")renderPerformance()}
+document.querySelectorAll(".nav button").forEach(b=>b.addEventListener("click",()=>navigate(b.dataset.page)));
+function openReport(type="",id=""){let r=reports.find(x=>x.id===id)||{};let root=$("modal-root");root.innerHTML=`<div class="modal-back" onclick="if(event.target===this)closeModal()"><div class="modal"><div class="modal-head"><h3>${id?"تحرير التقرير":"إنشاء تقرير جديد"}</h3><button class="close" onclick="closeModal()">✕</button></div><form id="report-form" onsubmit="submitReport(event,'${id}')"><div class="form-grid">
+<div class="field full"><label>عنوان التقرير *</label><input name="title" required value="${esc(r.title||"")}" placeholder="مثال: تقرير برنامج تعزيز الانضباط المدرسي"></div>
+<div class="field"><label>نوع التقرير *</label><select name="type" required>${templates.map(t=>`<option ${((r.type||type)===t[0])?"selected":""}>${esc(t[0])}</option>`).join("")}</select></div>
+<div class="field"><label>المجال</label><select name="category"><option>${esc(r.category||"البرامج والمبادرات")}</option>${["التوجيه الطلابي","الأداء المدرسي","الأنشطة المدرسية","الإدارة المدرسية","التطوير المهني","الشراكة المجتمعية","البرامج والمبادرات","أخرى"].filter(x=>x!==r.category).map(x=>`<option>${x}</option>`).join("")}</select></div>
+<div class="field"><label>تاريخ التنفيذ</label><input type="date" name="date" value="${esc(r.date||new Date().toISOString().slice(0,10))}"></div>
+<div class="field"><label>الفئة المستهدفة</label><input name="audience" value="${esc(r.audience||"")} " placeholder="مثال: طلاب المرحلة المتوسطة"></div>
+<div class="field"><label>عدد المستفيدين</label><input type="number" min="0" name="beneficiaries" value="${esc(r.beneficiaries??"0")}"></div>
+<div class="field"><label>نسبة الإنجاز %</label><input type="number" min="0" max="100" name="progress" value="${esc(r.progress??"0")}"></div>
+<div class="field full"><label>وصف البرنامج / خلفية التقرير</label><textarea name="description" placeholder="اكتب نبذة عن البرنامج أو الموضوع...">${esc(r.description||"")}</textarea></div>
+<div class="field full"><label>الأهداف</label><textarea name="goals" placeholder="اكتب الأهداف، ويمكن للمساعد الذكي صياغتها...">${esc(r.goals||"")}</textarea></div>
+<div class="field full"><label>إجراءات التنفيذ</label><textarea name="actions" placeholder="صف خطوات التنفيذ والممارسات...">${esc(r.actions||"")}</textarea></div>
+<div class="field full"><label>النتائج والأثر</label><textarea name="results" placeholder="ما النتائج التي تحققت؟ وما الشواهد الداعمة؟">${esc(r.results||"")}</textarea></div>
+<div class="field full"><label>التوصيات ومقترحات التحسين</label><textarea name="recommendations" placeholder="اكتب التوصيات والخطوات اللاحقة...">${esc(r.recommendations||"")}</textarea></div>
+<div class="field full"><label>وصف الشواهد والمرفقات</label><textarea name="evidence" placeholder="مثال: صور التنفيذ، كشف الحضور، استبانة رضا...">${esc(r.evidence||"")}</textarea></div>
+<div class="field full"><label>الشواهد والمرفقات</label><div class="evidence-picker"><label class="evidence-pick-btn" for="evidence-files">＋ إضافة الشواهد والصور</label><input id="evidence-files" type="file" accept="image/*,.pdf,.doc,.docx" multiple class="hidden" onchange="addEvidenceFiles(event)"><div class="muted" style="margin-top:8px">يمكن إرفاق صور الشواهد أو ملفات داعمة. تُحفظ الصور المصغّرة مع التقرير في هذا المتصفح.</div><div id="evidence-preview" class="evidence-preview"></div></div></div>
+<div class="field"><label>حالة التقرير</label><select name="status">${["مسودة","قيد المراجعة","مكتمل"].map(x=>`<option ${((r.status||"مسودة")===x)?"selected":""}>${x}</option>`).join("")}</select></div>
+<div class="field"><label>إعداد التقرير</label><input name="author" value="${esc(r.author||settings.author||"الموجّه الطلابي")}"></div>
+</div><div class="modal-actions"><button class="btn primary" type="submit">حفظ التقرير</button><button class="btn light" type="button" onclick="closeModal()">إلغاء</button></div></form></div></div>`;selectedEvidence=(r.attachments||[]).slice();renderEvidencePreview()}
+function closeModal(){$("modal-root").innerHTML=""}
+async function addEvidenceFiles(event){
+ const files=[...event.target.files||[]];event.target.value="";
+ for(const file of files){
+  if(selectedEvidence.length>=8){toast("الحد الأقصى 8 شواهد لكل تقرير");break}
+  if(file.type.startsWith("image/")){
+   try{const data=await compressEvidenceImage(file);selectedEvidence.push({name:file.name,type:"image",data})}
+   catch{toast("تعذر قراءة الصورة: "+file.name)}
+  }else if(file.type==="application/pdf"||/\.docx?$/i.test(file.name)){
+   selectedEvidence.push({name:file.name,type:"file",data:null})
+  }else{toast("نوع الملف غير مدعوم: "+file.name)}
+ }
+ renderEvidencePreview()
+}
+function compressEvidenceImage(file){return new Promise((resolve,reject)=>{const reader=new FileReader();reader.onerror=reject;reader.onload=()=>{const img=new Image();img.onerror=reject;img.onload=()=>{const scale=Math.min(1,1400/Math.max(img.width,img.height));const canvas=document.createElement("canvas");canvas.width=Math.round(img.width*scale);canvas.height=Math.round(img.height*scale);canvas.getContext("2d").drawImage(img,0,0,canvas.width,canvas.height);resolve(canvas.toDataURL("image/jpeg",.72))};img.src=reader.result};reader.readAsDataURL(file)})}
+function renderEvidencePreview(){const box=$("evidence-preview");if(!box)return;box.innerHTML=selectedEvidence.length?selectedEvidence.map((x,i)=>x.type==="image"?`<div style="position:relative"><img class="evidence-thumb" src="${x.data}" alt="${esc(x.name)}"><button type="button" class="mini" style="position:absolute;top:3px;left:3px" onclick="removeEvidence(${i})">×</button><div class="muted">${esc(x.name)}</div></div>`:`<div class="evidence-file">${esc(x.name)} <button type="button" class="mini" onclick="removeEvidence(${i})">حذف</button></div>`).join(""):`<span class="muted">لم تتم إضافة شواهد بعد.</span>`}
+function removeEvidence(i){selectedEvidence.splice(i,1);renderEvidencePreview()}
+function submitReport(e,id){e.preventDefault();let d=Object.fromEntries(new FormData(e.target).entries());d.beneficiaries=Number(d.beneficiaries)||0;d.progress=Number(d.progress)||0;let old=reports.find(x=>x.id===id);let item={...old,...d,attachments:selectedEvidence.slice(),id:id||crypto.randomUUID(),created:old?.created||new Date().toISOString(),updated:new Date().toISOString()};if(old)reports=reports.map(x=>x.id===id?item:x);else reports.unshift(item);save();closeModal();refresh();toast("تم حفظ التقرير بنجاح");}
+function renderReports(){let q=($("report-search")?.value||"").toLowerCase(),f=$("report-filter")?.value||"";let arr=reports.filter(r=>(!q||(r.title+" "+r.category+" "+r.type).toLowerCase().includes(q))&&(!f||r.status===f));$("reports-table").innerHTML=arr.length?arr.map(r=>`<tr><td><b>${esc(r.title)}</b><div class="report-meta">${esc(r.author||"")}</div></td><td>${esc(r.category)}</td><td>${esc(r.date||"—")}</td><td><span class="tag ${r.status==="مسودة"?"draft":""}">${esc(r.status)}</span></td><td><div class="actions"><button class="mini" onclick="viewReport('${r.id}')">عرض</button><button class="mini" onclick="openReport('','${r.id}')">تعديل</button><button class="mini" onclick="deleteReport('${r.id}')">حذف</button></div></td></tr>`).join(""):`<tr><td colspan="5" class="empty">لا توجد تقارير مطابقة. أنشئ تقريرك الأول.</td></tr>`}
+function deleteReport(id){if(confirm("هل تريد حذف هذا التقرير؟")){reports=reports.filter(x=>x.id!==id);save();refresh();renderReports();toast("تم حذف التقرير")}}
+function formatGoals(value){
+ const raw=String(value||"").replace(/\r/g,"").trim();
+ if(!raw)return "";
+ // Split numbered goals even when the user pasted them into one paragraph.
+ let normalized=raw.replace(/[؛;]/g,"\n");
+ normalized=normalized.replace(/\s+(?=(?:[٠-٩0-9]{1,2})\s*[.)、-]\s+)/g,"\n");
+ const lines=normalized.split(/\n+/).map(x=>x.trim()).filter(Boolean);
+ const items=[];
+ for(const line of lines){
+   const cleaned=line.replace(/^\s*(?:(?:هدف\s*)?[٠-٩0-9]{1,2}\s*[.)、:-]|[-•▪])\s*/,"").trim();
+   if(cleaned)items.push(cleaned);
+ }
+ const toArabicDigits=n=>String(n).replace(/[0-9]/g,d=>"٠١٢٣٤٥٦٧٨٩"[Number(d)]);
+ return `<ol class="goals-list" dir="rtl">${items.map((x,i)=>`<li><span class="goal-number" aria-label="الهدف ${toArabicDigits(i+1)}">${toArabicDigits(i+1)}</span><span class="goal-text">${esc(x)}</span></li>`).join("")}</ol>`;
+}
+function downloadReportWord(){
+ const report=$("print-report");if(!report)return toast("تعذر العثور على التقرير");
+ const title=(reports.find(x=>x.title===report.querySelector(".report-title-print")?.textContent)?.title||report.querySelector(".report-title-print")?.textContent||"تقرير مدرسي").replace(/[\\/:*?"<>|]/g,"-");
+ const styles=`<style>body{font-family:Tahoma,Arial,sans-serif;direction:rtl;color:#203342} .report-sheet{width:100%;padding:18px;border:5px double #16866b} .formal-letterhead{direction:ltr;display:grid;grid-template-columns:1fr 1fr 1.45fr;align-items:center;gap:16px;text-align:center;border-bottom:2px solid #16866b;padding:10px 8px 16px;margin-bottom:18px;min-height:112px}.vision-mark{grid-column:1;text-align:center;color:#888}.vision-word{font-size:18px}.vision-number{font-size:42px;font-weight:bold}.vision-caption{font-size:9px}.ministry-mark{grid-column:2;text-align:center}.ministry-mark svg{width:130px;height:54px}.ministry-mark .ar{font-size:19px;font-weight:bold;color:#087c70}.ministry-mark .en{font-size:10px;color:#087c70}.institution-details{direction:rtl;grid-column:3;text-align:center;font-size:15px;line-height:1.85;font-weight:bold;color:#111}.report-title-print{text-align:center;background:#e7f2ef;padding:10px;font-size:20px}table{width:100%;border-collapse:collapse}td{border:1px solid #cbd8d5;padding:9px;text-align:right}section{margin-top:18px}h3{font-size:14px;color:#16866b;border-bottom:1px solid #dce8e3;padding-bottom:7px}.goals-list{direction:rtl;list-style:none;padding:0}.goals-list li{direction:rtl;display:flex;gap:9px;align-items:flex-start;padding:8px;border:1px solid #d5e5df;margin:6px 0;text-align:right}.goal-number{display:inline-block;flex:0 0 28px;width:28px;background:#087c70;color:white;padding:5px;text-align:center;font-weight:bold}.goal-text{display:inline-block;flex:1;text-align:right}.report-signatures{display:flex;justify-content:space-between;gap:24px;margin-top:38px;text-align:center;page-break-inside:avoid}.report-signature{width:42%;font-weight:bold}.report-signature .line{border-top:1px solid #34434a;padding-top:7px}.report-signature .name{display:inline-block;margin-top:8px;padding:7px 12px;background:#e8f2ef}</style>`;
+ const html=`<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8">${styles}</head><body>${report.outerHTML}</body></html>`;
+ const blob=new Blob(['\ufeff',html],{type:"application/msword;charset=utf-8"});const url=URL.createObjectURL(blob);const a=document.createElement("a");a.href=url;a.download=title+".doc";document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),1500);toast("تم تجهيز ملف Word للتنزيل");
+}
+function viewReport(id){let r=reports.find(x=>x.id===id);if(!r)return;let school=settings.school||"مجمع عدي بن حاتم الطائي بعذفاء";$("modal-root").innerHTML=`<div class="modal-back" onclick="if(event.target===this)closeModal()"><div class="modal"><div class="modal-head no-print"><h3>معاينة التقرير</h3><button class="close" onclick="closeModal()">✕</button></div><article id="print-report" class="report-sheet mode-detailed" style="padding:24px;color:#203342;border:5px double #16866b;outline:1px solid #d2ad5b;outline-offset:-11px;position:relative"><header class="ministry-header formal-letterhead">
+  <div class="vision-mark" aria-label="رؤية المملكة 2030">
+    <div class="vision-word">رؤية <span>VISION</span></div>
+    <div class="vision-number">20<span class="vision-zero">30</span></div>
+    <div class="vision-caption">المملكة العربية السعودية</div>
+  </div>
+  <div class="ministry-mark">
+    <svg viewBox="0 0 220 90" role="img" aria-label="شعار وزارة التعليم"><g fill="#087c70"><circle cx="38" cy="18" r="4.4"/><circle cx="53" cy="22" r="4.4"/><circle cx="68" cy="28" r="4.4"/><circle cx="83" cy="35" r="4.4"/><circle cx="98" cy="42" r="4.4"/><circle cx="113" cy="48" r="4.4"/><circle cx="128" cy="42" r="4.4"/><circle cx="143" cy="35" r="4.4"/><circle cx="158" cy="28" r="4.4"/><circle cx="173" cy="22" r="4.4"/><circle cx="188" cy="18" r="4.4"/><circle cx="38" cy="34" r="4.4"/><circle cx="53" cy="38" r="4.4"/><circle cx="68" cy="44" r="4.4"/><circle cx="83" cy="50" r="4.4"/><circle cx="98" cy="56" r="4.4"/><circle cx="113" cy="62" r="4.4"/><circle cx="128" cy="56" r="4.4"/><circle cx="143" cy="50" r="4.4"/><circle cx="158" cy="44" r="4.4"/><circle cx="173" cy="38" r="4.4"/><circle cx="188" cy="34" r="4.4"/></g></svg>
+    <div class="ar">وزارة التعليم</div>
+    <div class="en">Ministry of Education</div>
+  </div>
+  <div class="institution-details">
+    <div>المملكة العربية السعودية</div>
+    <div>وزارة التعليم</div>
+    <div>الإدارة العامة للتعليم بمنطقة الجوف</div>
+    <div class="school-name">مجمع عدي بن حاتم الطائي بعذفاء</div>
+  </div>
+</header><h2 class="report-title-print" style="text-align:center">${esc(r.title)}</h2><table style="min-width:0"><tr><td><b>نوع التقرير</b></td><td>${esc(r.type)}</td><td><b>التاريخ</b></td><td>${esc(r.date)}</td></tr><tr><td><b>الفئة المستهدفة</b></td><td>${esc(r.audience||"—")}</td><td><b>عدد المستفيدين</b></td><td>${r.beneficiaries}</td></tr></table>${[["وصف التقرير",r.description],["الأهداف",r.goals],["إجراءات التنفيذ",r.actions],["النتائج والأثر",r.results],["التوصيات",r.recommendations],["الشواهد",r.evidence]].map(([h,v])=>v?`<section style="margin-top:20px"><h3 style="font-size:14px;color:#16866b;border-bottom:1px solid #dce8e3;padding-bottom:7px">${h}</h3>${h==="الأهداف"?formatGoals(v):`<p style="font-size:12px;line-height:2;white-space:pre-wrap">${esc(v)}</p>`}</section>`:"").join("")}<div class="report-final-page ${(r.attachments||[]).length?'has-attachments':''}">${(r.attachments||[]).length?`<section style="margin-top:22px"><h3 style="font-size:14px;color:#16866b;border-bottom:1px solid #dce8e3;padding-bottom:7px">الشواهد والمرفقات</h3><div class="evidence-print-grid">${r.attachments.map(a=>a.type==="image"?`<div style="width:30%;text-align:center"><img src="${a.data}" style="width:100%;height:125px;object-fit:contain;border:1px solid #d9e5df;border-radius:6px"></div>`:`<div style="border:1px solid #d9e5df;padding:9px;font-size:11px">${esc(a.name)}</div>`).join("")}</div></section>`:""}<div class="report-signatures"><div class="report-signature"><div class="line">الموجّه الطلابي</div><div class="name">عبدالله عبدالرحمن الشمري</div></div><div class="report-signature"><div class="line">مدير المدرسة</div><div class="name">خميس عبدالله الكويكبي</div></div></div></div></article><div class="print-mode-bar no-print"><b style="font-size:11px;align-self:center;margin-left:5px">نمط الطباعة:</b><button type="button" class="selected" data-print-mode="detailed" onclick="setPrintMode('detailed',this)">تقرير تفصيلي</button><button type="button" data-print-mode="compact" onclick="setPrintMode('compact',this)">تقرير مختصر</button><button type="button" data-print-mode="evidence" onclick="setPrintMode('evidence',this)">تقرير مصور للشواهد</button></div><div class="modal-actions no-print"><button class="btn primary" onclick="printReport()">⬇ تنزيل PDF</button><button class="btn soft" onclick="downloadReportWord()">⬇ تنزيل Word</button><button class="btn light" onclick="closeModal()">إغلاق</button></div></div></div>`}
+function setPrintMode(mode,button){const report=$("print-report");if(!report)return;report.classList.remove("mode-compact","mode-detailed","mode-evidence");report.classList.add("mode-"+mode);document.querySelectorAll("[data-print-mode]").forEach(b=>b.classList.toggle("selected",b===button));toast(mode==="compact"?"تم اختيار التقرير المختصر":mode==="evidence"?"تم اختيار التقرير المصور":"تم اختيار التقرير التفصيلي")}
+function printReport(){const report=$("print-report");if(!report){toast("تعذر العثور على التقرير");return}document.body.classList.add("printing-report");const cleanup=()=>{document.body.classList.remove("printing-report");window.removeEventListener("afterprint",cleanup)};window.addEventListener("afterprint",cleanup);try{window.print();setTimeout(()=>{if(document.body.classList.contains("printing-report"))cleanup()},1200)}catch(e){cleanup();toast("تعذرت الطباعة من هذا المتصفح. افتح الصفحة في Safari ثم أعد المحاولة.")}}
+function renderTemplates(){$("templates-grid").innerHTML=templates.map(t=>`<button class="template" onclick="openReport('${t[0]}')"><span class="ti">${t[2]}</span><b>${t[0]}</b><small>${t[3]}</small></button>`).join("");$("guidance-grid").innerHTML=templates.filter(t=>t[1]==="التوجيه الطلابي").map(t=>`<button class="template" onclick="openReport('${t[0]}')"><span class="ti">${t[2]}</span><b>${t[0]}</b><small>${t[3]}</small></button>`).join("")}
+function renderRecent(){let arr=reports.slice(0,5);$("recent-list").innerHTML=arr.length?arr.map(r=>`<div class="report-row"><div><div class="report-title">${esc(r.title)}</div><div class="report-meta">${esc(r.category)} · ${esc(r.date||"")}</div></div><span class="tag ${r.status==="مسودة"?"draft":""}">${esc(r.status)}</span></div>`).join(""):`<div class="empty">لا توجد تقارير بعد. ابدأ بإنشاء أول تقرير مدرسي.</div>`}
+function renderPrograms(){let arr=reports.filter(r=>["البرامج والمبادرات","الأنشطة المدرسية"].includes(r.category)||/برنامج|مبادرة|فعالية/.test(r.type));$("program-list").innerHTML=arr.length?arr.map(r=>`<div class="report-row"><div><div class="report-title">${esc(r.title)}</div><div class="report-meta">${esc(r.date||"")} · ${r.beneficiaries} مستفيد</div></div><button class="mini" onclick="viewReport('${r.id}')">عرض التقرير</button></div>`).join(""):`<div class="empty">لا توجد برامج موثقة حتى الآن.</div>`}
+function renderEvidence(){let arr=reports.filter(r=>r.evidence);$("evidence-list").innerHTML=arr.length?arr.map(r=>`<div class="report-row"><div><div class="report-title">${esc(r.title)}</div><div class="report-meta">${esc(r.evidence)}</div></div><button class="mini" onclick="viewReport('${r.id}')">فتح</button></div>`).join(""):`<div class="empty">لم تُسجل أوصاف شواهد بعد.</div>`}
+function renderPerformance(){let sum=reports.reduce((a,r)=>a+r.beneficiaries,0),avg=reports.length?Math.round(reports.reduce((a,r)=>a+r.progress,0)/reports.length):0;$("beneficiaries").textContent=sum;$("avg-progress").textContent=avg+"%";$("review-count").textContent=reports.filter(r=>r.status==="قيد المراجعة").length;$("draft-count").textContent=reports.filter(r=>r.status==="مسودة").length;$("analysis-text").textContent=reports.length?`سُجل ${reports.length} تقريراً، بإجمالي ${sum} مستفيد مسجل ومتوسط إنجاز ${avg}%. هذه مؤشرات وصفية أولية، ولا تمثل قياس أثر مستقل ما لم تُدعّم ببيانات موثقة.`:"أضف تقاريرك لتظهر المؤشرات والتحليلات هنا."}
+function refresh(){let month=new Date().toISOString().slice(0,7);$("stat-total").textContent=reports.length;$("stat-month").textContent=reports.filter(r=>(r.date||"").startsWith(month)).length;$("stat-programs").textContent=reports.filter(r=>["البرامج والمبادرات","الأنشطة المدرسية"].includes(r.category)).length;$("stat-done").textContent=reports.filter(r=>r.status==="مكتمل").length;let done=reports.filter(r=>r.status==="مكتمل").length,p=reports.length?Math.round(done/reports.length*100):0;$("done-progress").style.width=p+"%";$("done-label").textContent=reports.length?`${done} من ${reports.length} تقرير مكتمل (${p}%)`:"لا توجد بيانات بعد";$("status-summary").innerHTML=["مكتمل","قيد المراجعة","مسودة"].map((s,i)=>`<div style="display:flex;justify-content:space-between;margin:12px 0;font-size:11px"><span>${s}</span><b>${reports.filter(r=>r.status===s).length}</b></div>`).join("");renderRecent();renderPrograms();renderEvidence();renderReports();renderPerformance()}
+function saveAIProvider(){const provider=$("ai-provider")?.value||"gemini";localStorage.setItem("school_ai_provider",provider)}
+function loadAIProvider(){const provider=localStorage.getItem("school_ai_provider")||"gemini";if($("ai-provider"))$("ai-provider").value=provider}
+async function generateAI(){
+ const endpoint=(settings.aiEndpoint||$("ai-endpoint")?.value||"").trim();
+ const task=$("ai-kind").value;
+ const context=$("ai-input").value;
+ const provider=$("ai-provider")?.value||"gemini";
+ if(!context.trim()){toast("أدخل معلومات التقرير أولاً");return}
+ if(!endpoint){toast("أضف رابط خدمة الذكاء الاصطناعي في الإعدادات أولاً");navigate("settings");return}
+ const btn=document.querySelector('#page-assistant button[onclick="generateAI()"]');
+ const output=$("ai-output");
+ if(btn){btn.disabled=true;btn.textContent="جارٍ إنشاء المحتوى..."}
+ if(output)output.value=provider==="gemini"?"يتم الاتصال بنموذج Gemini...":"يتم الاتصال بنموذج OpenAI...";
+ const controller=new AbortController();
+ const timeoutId=setTimeout(()=>controller.abort(),65000);
+ try{
+  const res=await fetch(endpoint,{method:"POST",headers:{"Content-Type":"application/json"},body:JSON.stringify({task,context,language:"ar",school:settings.school||"مجمع عدي بن حاتم الطائي بعذفاء",provider}),signal:controller.signal});
+  const raw=await res.text();let data={};
+  try{data=raw?JSON.parse(raw):{}}catch{throw Error("أعاد الخادم استجابة غير مفهومة. راجع إعداد Worker في Cloudflare.")}
+  if(!res.ok)throw Error(data.error||("HTTP "+res.status));
+  const report=data.report||data.data||null;
+  if(!report||typeof report!=="object")throw Error(data.error||"استجابة الخادم لا تحتوي على تقرير.");
+  aiDraft=report;
+  const labels={title:"عنوان التقرير",description:"وصف التقرير",goals:"الأهداف",actions:"إجراءات التنفيذ",results:"النتائج والأثر",recommendations:"التوصيات"};
+  if(output)output.value=Object.entries(labels).map(([k,label])=>label+"\n"+(report[k]||"لم يرد في المعلومات المدخلة.")).join("\n\n");
+  $("apply-ai-btn").disabled=false;toast("تم إنشاء مسودة التقرير بنجاح. راجعها قبل اعتمادها.");
+ }catch(error){const message=error?.name==="AbortError"?"انتهت مهلة الاتصال. أعد المحاولة أو اختر المحرك الآخر.":String(error?.message||error);if(output)output.value="تعذر إنشاء التقرير:\n"+message;toast(message.slice(0,150))}
+ finally{clearTimeout(timeoutId);if(btn){btn.disabled=false;btn.textContent="✳ توليد المحتوى"}}
+}
+function applyAIDraft(){if(!aiDraft)return toast("ولّد المحتوى أولاً");let type=aiDraft.type||"تقرير تنفيذ برنامج";openReport(type);let form=$("report-form");if(!form)return;let map={title:"title",description:"description",goals:"goals",actions:"actions",results:"results",recommendations:"recommendations",audience:"audience"};Object.entries(map).forEach(([k,n])=>{let el=form.elements.namedItem(n);if(el&&aiDraft[k])el.value=aiDraft[k]});let typeEl=form.elements.namedItem("type");if(typeEl&&[...typeEl.options].some(o=>o.value===type))typeEl.value=type;toast("تم نقل المسودة إلى نموذج التقرير. راجع البيانات ثم احفظها.")}
+
+function copyAI(){let v=$("ai-output").value;if(!v)return toast("لا يوجد نص لنسخه");navigator.clipboard?.writeText(v).then(()=>toast("تم نسخ النص")).catch(()=>toast("تعذر النسخ التلقائي"))}
+function loadSettings(){ $("setting-author").value=settings.author||"الموجّه الطلابي";$("setting-school").value=settings.school||"مجمع عدي بن حاتم الطائي بعذفاء";$("setting-year").value=settings.year||"";$("sb-url").value=settings.sbUrl||"";$("sb-key").value=settings.sbKey||"";$("ai-endpoint").value=settings.aiEndpoint||"";$("cloud-status").textContent=settings.sbUrl?"إعداد Supabase محفوظ. تحقق من الاتصال والمزامنة.":"الحفظ الحالي: محلي على هذا المتصفح."}
+function saveSettings(){settings={...settings,author:$("setting-author").value,school:$("setting-school").value,year:$("setting-year").value,sbUrl:$("sb-url").value.trim().replace(/\/$/,""),sbKey:$("sb-key").value.trim(),aiEndpoint:$("ai-endpoint").value.trim()};localStorage.setItem("school_settings_v1",JSON.stringify(settings));toast("تم حفظ الإعدادات");}
+async function cloudRequest(path,method="GET",body){if(!settings.sbUrl||!settings.sbKey)throw Error("أدخل بيانات Supabase أولاً");let res=await fetch(settings.sbUrl+"/rest/v1/"+path,{method,headers:{"apikey":settings.sbKey,"Authorization":"Bearer "+settings.sbKey,"Content-Type":"application/json","Prefer":"resolution=merge-duplicates,return=representation"},body:body?JSON.stringify(body):undefined});if(!res.ok)throw Error(await res.text());return res.status===204?[]:res.json()}
+async function testCloud(){saveSettings();try{await cloudRequest("school_reports?select=id&limit=1");$("cloud-status").textContent="الاتصال ناجح. جدول school_reports متاح.";toast("نجح الاتصال بقاعدة البيانات")}catch(e){$("cloud-status").textContent="فشل الاتصال: "+e.message;toast("تعذر الاتصال. راجع الإعدادات وسياسات RLS")}}
+async function syncCloud(){saveSettings();try{let payload=reports.map(r=>({id:r.id,data:r,updated_at:r.updated||new Date().toISOString()}));if(payload.length)await cloudRequest("school_reports?on_conflict=id","POST",payload);let remote=await cloudRequest("school_reports?select=data&order=updated_at.desc");let map=new Map(reports.map(r=>[r.id,r]));(remote||[]).forEach(x=>{if(x.data&&!map.has(x.data.id))map.set(x.data.id,x.data)});reports=[...map.values()].sort((a,b)=>(b.updated||"").localeCompare(a.updated||""));save();refresh();$("cloud-status").textContent="اكتملت المزامنة. عدد التقارير على هذا الجهاز: "+reports.length;toast("اكتملت المزامنة")}catch(e){$("cloud-status").textContent="تعذرت المزامنة: "+e.message;toast("فشلت المزامنة")}}
+function backup(){let blob=new Blob([JSON.stringify({reports,settings,exportedAt:new Date().toISOString()},null,2)],{type:"application/json"}),a=document.createElement("a");a.href=URL.createObjectURL(blob);a.download="school-reports-backup.json";a.click();URL.revokeObjectURL(a.href)}
+function restoreBackup(e){let f=e.target.files[0];if(!f)return;let rd=new FileReader();rd.onload=()=>{try{let d=JSON.parse(rd.result);if(!Array.isArray(d.reports))throw Error();if(confirm("سيتم دمج التقارير المستوردة مع التقارير الحالية. متابعة؟")){let m=new Map(reports.map(x=>[x.id,x]));d.reports.forEach(x=>m.set(x.id,x));reports=[...m.values()];save();refresh();toast("تم استيراد النسخة الاحتياطية")}}catch{toast("ملف النسخة الاحتياطية غير صالح")}};rd.readAsText(f);e.target.value=""}
+renderTemplates();loadSettings();loadAIProvider();refresh();
+</script></body></html>
